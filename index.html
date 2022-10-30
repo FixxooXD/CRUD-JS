@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Document</title>
+  </head>
+  <body class="flex justify-center">
+    <div class="border-2 w-1/2 mt-20 h-96 overflow-y-auto">
+      <!-- banner -->
+      <div class="title border-b-2 text-center"><span>TODO LIST</span></div>
+      <!-- input -->
+      <div class="inputAddBtn-Rapper flex justify-center mt-4">
+        <!-- <textarea name="" id="input" class="border-2 w-1/2"></textarea> -->
+        <input
+          type="text"
+          name="input"
+          placeholder="Add new task.."
+          id="input"
+          class="border-2 w-7/12 h-10"
+        />
+        <button id="addBtn" class="border-2 px-2">add</button>
+      </div>
+      <!-- items -->
+      <div class="flex justify-center item-center h-10">
+        <ol class="list w-7/12 mt-4">
+          <div class="flex justify-between px-2 item-center border-2">
+            <li class="w-96 py-1">yooo</li>
+            <button id="edit" onClick="editPost(this)">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button id="clear" onclick="deletePost(this)">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+
+          <div class="flex justify-between px-2 item-center mt-2 border-2">
+            <li class="w-96 py-1">kya bee</li>
+            <button id="edit" onClick="editPost(this)">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button id="clear" onclick="deletePost(this)">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </ol>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
