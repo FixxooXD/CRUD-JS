@@ -41,7 +41,7 @@ function addFunction() {
     List.appendChild(container);
     let listItem = document.createElement("li");
     listItem.innerHTML = `  <div class="flex justify-between px-2 item-center mt-4  rounded bg-white">
-  <li class="w-96 py-3">kya bee</li>
+  <li class="w-96 py-3">${inputVal.value}</li>
   <button id="edit" onClick="editPost(this)">
     <i class="fa-solid fa-pen-to-square text-xl"></i>
   </button>
