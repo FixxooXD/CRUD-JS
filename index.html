@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -14,49 +17,65 @@
     />
     <link rel="stylesheet" href="./output.css" />
     <style>
-      li,span,input{
-        font-family: 'Montserrat', sans-serif;
+      li,
+      span,
+      input {
+        font-family: "Montserrat", sans-serif;
+      }
+      body {
+        /* background-image: linear-gradient(to right, #40E0D0 , #FF8C00, #FF0080); */
+        /* background-color: #222; */
       }
     </style>
     <title>TODO-LIST</title>
   </head>
-  <body class="flex justify-center">
-    <div class="border-2 sm:w-1/2 mt-20 h-96 overflow-y-auto">
+  <body class="flex justify-center bg-rose-400">
+    <div class="sm:w-1/2 mt-20 h-screen overflow-y-auto bg-rose-400">
       <!-- banner -->
-      <div class="title border-b-2 text-center py-2 px-2"><span class="text-2xl">TODO LIST</span></div>
+      <div class="title text-center py-2 px-2">
+        <span class="text-3xl text-white">TODO LIST</span>
+      </div>
       <!-- input -->
       <div class="inputAddBtn-Rapper flex justify-center mt-4">
-        <!-- <textarea name="" id="input" class="border-2 w-1/2"></textarea> -->
         <input
-        oninput="validate(this)"
+          oninput="validate(this)"
           type="text"
           name="input"
           placeholder="Add new task.."
           id="input"
-          class="border-2 w-7/12 h-10 px-2 "
+          class="w-7/12 h-10 px-2"
         />
-        <button id="addBtn" class="border-2 px-4 ml-1 text-xl"><i class="fa-solid fa-plus"></i></button>
+        <button
+          id="addBtn"
+          class="border-2 border-current px-4 ml-2 text-2xl text-white"
+        >
+          <i class="fa-solid fa-plus"></i>
+        </button>
       </div>
       <!-- items -->
       <div class="flex justify-center item-center h-10">
-        <ol class="list w-7/12 mt-2">
-          <div class="flex justify-between px-2 item-center mt-2 border-2">
-            <li class="w-96 py-1">yooo</li>
+        <ol class="list w-7/12">
+          <div
+            class="flex justify-between px-2 item-center mt-4 rounded bg-white"
+          >
+            <li class="w-96 py-3">yooo</li>
             <button id="edit" onClick="editPost(this)">
-              <i class="fa-solid fa-pen-to-square"></i>
+              <i class="fa-solid fa-pen-to-square text-xl"></i>
             </button>
             <button id="clear" onclick="deletePost(this)">
-              <i class="fa-solid fa-trash"></i>
+              <i class="fa-solid fa-trash text-xl"></i>
             </button>
           </div>
 
-          <div class="flex justify-between px-2 item-center mt-2 border-2">
-            <li class="w-96 py-1">kya bee</li>
+          <div
+            class="flex justify-between px-2 item-center mt-4 rounded bg-white"
+          >
+            <li class="w-96 py-3">kya bee</li>
             <button id="edit" onClick="editPost(this)">
-              <i class="fa-solid fa-pen-to-square"></i>
+              <i class="fa-solid fa-pen-to-square text-xl"></i>
             </button>
             <button id="clear" onclick="deletePost(this)">
-              <i class="fa-solid fa-trash"></i>
+              <i class="fa-solid fa-trash text-xl"></i>
             </button>
           </div>
         </ol>

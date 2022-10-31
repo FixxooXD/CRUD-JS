@@ -12,9 +12,8 @@ let deletePost = (e) => {
 };
 
 // no whitespace
-function validate(input){
-  if(/^\s/.test(input.value))
-    input.value = '';
+function validate(input) {
+  if (/^\s/.test(input.value)) input.value = "";
 }
 
 let editPost = (e) => {
@@ -22,19 +21,36 @@ let editPost = (e) => {
   e.parentElement.remove();
 };
 
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function (event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    addFunction();
+  }
+});
+
 addBTN.addEventListener("click", () => {
-  let container = document.createElement("div");
-  List.appendChild(container);
-  let listItem = document.createElement("li");
-  listItem.innerHTML = ` <div class="flex justify-between px-2 item-center mt-2 border-2">
-  <li class="w-96 py-1">${inputVal.value}</li>
-  <button onClick="editPost(this)"  id="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+  addFunction();
+});
+
+function addFunction() {
+  if (inputVal.value == "") {
+    console.log("yes");
+  } else {
+    let container = document.createElement("div");
+    List.appendChild(container);
+    let listItem = document.createElement("li");
+    listItem.innerHTML = `  <div class="flex justify-between px-2 item-center mt-4  rounded bg-white">
+  <li class="w-96 py-3">kya bee</li>
+  <button id="edit" onClick="editPost(this)">
+    <i class="fa-solid fa-pen-to-square text-xl"></i>
+  </button>
   <button id="clear" onclick="deletePost(this)">
-    <i class="fa-solid fa-trash"></i>
+    <i class="fa-solid fa-trash text-xl"></i>
   </button>
 </div>`;
-  // listItem.innerHTML = `<div class="flex"><li>${inputVal.value}</li> <button id="clear">clear</button> <button id="edit">edit</button></div>`;
-  container.appendChild(listItem);
-  inputVal.value = "";
-
-});
+    // listItem.innerHTML = `<div class="flex"><li>${inputVal.value}</li> <button id="clear">clear</button> <button id="edit">edit</button></div>`;
+    container.appendChild(listItem);
+    inputVal.value = "";
+  }
+}
