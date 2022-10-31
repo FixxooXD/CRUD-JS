@@ -11,6 +11,12 @@ let deletePost = (e) => {
   e.parentElement.remove();
 };
 
+// no whitespace
+function validate(input){
+  if(/^\s/.test(input.value))
+    input.value = '';
+}
+
 let editPost = (e) => {
   input.value = e.previousElementSibling.innerHTML;
   e.parentElement.remove();
@@ -29,5 +35,6 @@ addBTN.addEventListener("click", () => {
 </div>`;
   // listItem.innerHTML = `<div class="flex"><li>${inputVal.value}</li> <button id="clear">clear</button> <button id="edit">edit</button></div>`;
   container.appendChild(listItem);
-  inputVal.value ="";
+  inputVal.value = "";
+
 });
